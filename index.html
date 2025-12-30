@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Andrea Viridiana Espinoza Palma - Especialidades Dentales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg" id="animatedBg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>Dra. Espinoza Palma</span>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#compromiso">Nuestro Compromiso</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#cita">Agendar Cita</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Tu Sonrisa, Nuestra Pasión</h1>
+                <p class="fade-in-delay">Especialistas en cuidado dental integral con los más altos estándares de calidad</p>
+                <div class="hero-buttons fade-in-delay-2">
+                    <a href="#cita" class="btn btn-primary">Agendar Cita</a>
+                    <a href="#nosotros" class="btn btn-secondary">Conocer Más</a>
+                </div>
+                <div class="hero-info fade-in-delay-3">
+                    <div class="info-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <div>
+                            <small>Citas al</small>
+                            <strong>55 2563 3393</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="tooth-illustration">
+                    <svg viewBox="0 0 200 300" fill="none">
+                        <defs>
+                            <linearGradient id="toothGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e8f4f8;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M100 20 C80 20 70 30 70 50 C70 70 60 80 60 100 L60 220 C60 250 70 280 100 280 C130 280 140 250 140 220 L140 100 C140 80 130 70 130 50 C130 30 120 20 100 20 Z" 
+                              fill="url(#toothGradient)" 
+                              stroke="#4a90e2" 
+                              stroke-width="2"/>
+                        <ellipse cx="100" cy="50" rx="25" ry="15" fill="#fff" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="section nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Conócenos</span>
+                <h2>Nosotros</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="dental-structure">
+                        <svg viewBox="0 0 300 300" fill="none">
+                            <circle cx="150" cy="150" r="120" stroke="#4a90e2" stroke-width="2" opacity="0.3"/>
+                            <circle cx="150" cy="150" r="100" stroke="#4a90e2" stroke-width="2" opacity="0.5"/>
+                            <circle cx="150" cy="150" r="80" stroke="#4a90e2" stroke-width="3" opacity="0.7"/>
+                            <!-- Teeth arrangement -->
+                            <g class="teeth-group">
+                                <rect x="135" y="70" width="30" height="40" rx="5" fill="#fff" stroke="#4a90e2" stroke-width="2"/>
+                                <rect x="105" y="75" width="25" height="35" rx="5" fill="#fff" stroke="#4a90e2" stroke-width="2"/>
+                                <rect x="170" y="75" width="25" height="35" rx="5" fill="#fff" stroke="#4a90e2" stroke-width="2"/>
+                                <rect x="80" y="85" width="20" height="30" rx="5" fill="#fff" stroke="#4a90e2" stroke-width="2"/>
+                                <rect x="200" y="85" width="20" height="30" rx="5" fill="#fff" stroke="#4a90e2" stroke-width="2"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Dra. Andrea Viridiana Espinoza Palma</h3>
+                    <p class="credentials">Cédula Profesional: 7263884</p>
+                    <p>Con años de experiencia en el cuidado dental integral, nuestra clínica se dedica a proporcionar servicios odontológicos de la más alta calidad con un enfoque personalizado y humano.</p>
+                    <p>Utilizamos tecnología de vanguardia y técnicas innovadoras para garantizar que cada paciente reciba el mejor tratamiento posible en un ambiente cómodo y profesional.</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Tecnología Avanzada</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Atención Personalizada</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Años de Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section id="compromiso" class="section compromiso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Lo que nos mueve</span>
+                <h2>Nuestro Compromiso</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="commitment-grid">
+                <div class="commitment-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Cuidado Compasivo</h3>
+                    <p>Tratamos a cada paciente como parte de nuestra familia, brindando un ambiente cálido y acogedor donde te sentirás seguro y cómodo.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3>Excelencia Clínica</h3>
+                    <p>Nos comprometemos a mantener los más altos estándares de calidad en todos nuestros procedimientos, utilizando las mejores prácticas y materiales.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3>Educación Continua</h3>
+                    <p>Nos mantenemos actualizados con las últimas innovaciones en odontología para ofrecerte los tratamientos más modernos y efectivos.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Puntualidad</h3>
+                    <p>Respetamos tu tiempo. Nos esforzamos por mantener horarios puntuales y minimizar los tiempos de espera en nuestro consultorio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="section testimonios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Lo que dicen nuestros pacientes</span>
+                <h2>Historia de Clientes</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excelente servicio y atención. La Dra. Espinoza es muy profesional y me hizo sentir en confianza desde la primera consulta. Mis dientes nunca habían estado mejor."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <strong>María González</strong>
+                            <span>Paciente desde 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"El trato es excepcional y las instalaciones son muy modernas. Me realizaron una limpieza dental profunda y el resultado fue increíble. Totalmente recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div>
+                            <strong>Carlos Ramírez</strong>
+                            <span>Paciente desde 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Siempre tuve miedo al dentista, pero aquí me trataron con mucha paciencia y cuidado. Ahora visito al dentista regularmente sin ningún temor. Gracias por el excelente servicio."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">L</div>
+                        <div>
+                            <strong>Laura Martínez</strong>
+                            <span>Paciente desde 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form Section -->
+    <section id="cita" class="section appointment">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Agenda tu visita</span>
+                <h2>Formulario para Agendar Cita</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="appointment-content">
+                <div class="appointment-info">
+                    <h3>¿Listo para mejorar tu sonrisa?</h3>
+                    <p>Completa el formulario y nos pondremos en contacto contigo a la brevedad para confirmar tu cita.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>55 2563 3393</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lun - Vie: 9:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="appointment-form" id="appointmentForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha Preferida *</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora Preferida *</label>
+                            <select id="hora" name="hora" required>
+                                <option value="">Selecciona una hora</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivo">Motivo de la Consulta</label>
+                        <textarea id="motivo" name="motivo" rows="4" placeholder="Describe brevemente el motivo de tu visita..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Solicitar Cita</button>
+                    <p class="form-note">* Campos obligatorios. Nos pondremos en contacto para confirmar tu cita.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dra. Andrea V. Espinoza Palma</h4>
+                    <p>Especialista en cuidado dental integral</p>
+                    <p class="footer-ced">Cédula Profesional: 7263884</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: 55 2563 3393</p>
+                    <p>Email: contacto@especialidadesdentales.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábados: 9:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Especialidades Dentales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <h3>¡Solicitud Enviada!</h3>
+            <p>Gracias por tu interés. Nos pondremos en contacto contigo pronto para confirmar tu cita.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Entendido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
