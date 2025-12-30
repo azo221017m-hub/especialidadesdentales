@@ -176,6 +176,9 @@ mobileStyle.textContent = `
 `;
 document.head.appendChild(mobileStyle);
 
+// Form submission configuration
+const WHATSAPP_NUMBER = '525525633393';
+
 // Form submission
 const appointmentForm = document.getElementById('appointmentForm');
 const successModal = document.getElementById('successModal');
@@ -203,7 +206,8 @@ if (appointmentForm) {
         }
         
         // Validate date is in the future
-        const selectedDate = new Date(data.fecha);
+        const [year, month, day] = data.fecha.split('-').map(Number);
+        const selectedDate = new Date(year, month - 1, day);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         
@@ -213,7 +217,7 @@ if (appointmentForm) {
         }
         
         // Format date for WhatsApp message
-        const formattedDate = new Date(data.fecha).toLocaleDateString('es-MX', {
+        const formattedDate = selectedDate.toLocaleDateString('es-MX', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
@@ -234,14 +238,16 @@ if (appointmentForm) {
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
         
-        // WhatsApp number (including country code)
-        const whatsappNumber = '525525633393';
-        
         // Create WhatsApp URL
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
         
-        // Open WhatsApp in new tab
-        window.open(whatsappURL, '_blank');
+        // Open WhatsApp in new tab with error handling
+        const whatsappWindow = window.open(whatsappURL, '_blank');
+        
+        if (!whatsappWindow) {
+            // Popup was blocked, provide alternative
+            alert('Por favor permite las ventanas emergentes para abrir WhatsApp, o copia este número: ' + WHATSAPP_NUMBER);
+        }
         
         // Reset form
         appointmentForm.reset();
