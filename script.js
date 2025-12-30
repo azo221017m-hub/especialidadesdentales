@@ -195,11 +195,10 @@ if (appointmentForm) {
         }
         
         // Validate phone number (basic validation)
-        const phoneRegex = /^[0-9]{10}$/;
         const cleanPhone = data.telefono.replace(/\D/g, '');
         
-        if (!phoneRegex.test(cleanPhone)) {
-            alert('Por favor ingresa un número de teléfono válido (10 dígitos).');
+        if (cleanPhone.length < 10) {
+            alert('Por favor ingresa un número de teléfono válido (mínimo 10 dígitos).');
             return;
         }
         
@@ -281,11 +280,7 @@ function animateValue(element, start, end, duration) {
 
 // Add loading animation
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    // Page is loaded, no flash effect needed
 });
 
 // Enhance form inputs with animations
