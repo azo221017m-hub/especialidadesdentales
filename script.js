@@ -176,6 +176,9 @@ mobileStyle.textContent = `
 `;
 document.head.appendChild(mobileStyle);
 
+// Form submission configuration
+const WHATSAPP_NUMBER = '525525633393';
+
 // Form submission
 const appointmentForm = document.getElementById('appointmentForm');
 const successModal = document.getElementById('successModal');
@@ -203,7 +206,8 @@ if (appointmentForm) {
         }
         
         // Validate date is in the future
-        const selectedDate = new Date(data.fecha);
+        const [year, month, day] = data.fecha.split('-').map(Number);
+        const selectedDate = new Date(year, month - 1, day);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         
@@ -212,19 +216,41 @@ if (appointmentForm) {
             return;
         }
         
-        // In a real application, this would send data to a server
-        console.log('Appointment request:', data);
+        // Format date for WhatsApp message
+        const formattedDate = selectedDate.toLocaleDateString('es-MX', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
         
-        // Show success modal
-        successModal.classList.add('active');
+        // Create WhatsApp message
+        let message = `*Nueva Solicitud de Cita*\n\n`;
+        message += `👤 *Nombre:* ${data.nombre}\n`;
+        message += `📱 *Teléfono:* ${data.telefono}\n`;
+        message += `📅 *Fecha:* ${formattedDate}\n`;
+        message += `🕐 *Hora:* ${data.hora}\n`;
+        
+        if (data.motivo && data.motivo.trim() !== '') {
+            message += `📝 *Motivo:* ${data.motivo}\n`;
+        }
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in new tab with error handling
+        const whatsappWindow = window.open(whatsappURL, '_blank');
+        
+        if (!whatsappWindow) {
+            // Popup was blocked, provide alternative
+            alert('Por favor permite las ventanas emergentes para abrir WhatsApp, o copia este número: ' + WHATSAPP_NUMBER);
+        }
         
         // Reset form
         appointmentForm.reset();
-        
-        // Close modal after 5 seconds
-        setTimeout(() => {
-            closeModal();
-        }, 5000);
     });
 }
 
