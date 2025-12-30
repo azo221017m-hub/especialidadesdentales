@@ -212,19 +212,39 @@ if (appointmentForm) {
             return;
         }
         
-        // In a real application, this would send data to a server
-        console.log('Appointment request:', data);
+        // Format date for WhatsApp message
+        const formattedDate = new Date(data.fecha).toLocaleDateString('es-MX', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
         
-        // Show success modal
-        successModal.classList.add('active');
+        // Create WhatsApp message
+        let message = `*Nueva Solicitud de Cita*\n\n`;
+        message += `👤 *Nombre:* ${data.nombre}\n`;
+        message += `📱 *Teléfono:* ${data.telefono}\n`;
+        message += `📅 *Fecha:* ${formattedDate}\n`;
+        message += `🕐 *Hora:* ${data.hora}\n`;
+        
+        if (data.motivo && data.motivo.trim() !== '') {
+            message += `📝 *Motivo:* ${data.motivo}\n`;
+        }
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // WhatsApp number (including country code)
+        const whatsappNumber = '525525633393';
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
         
         // Reset form
         appointmentForm.reset();
-        
-        // Close modal after 5 seconds
-        setTimeout(() => {
-            closeModal();
-        }, 5000);
     });
 }
 
